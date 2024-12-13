@@ -11,8 +11,7 @@ kaboom({
 
 
 // // load assets
-loadRoot("/assets/img/");
-
+// loadRoot("/");
 loadSprite("guy", "guy.png");
 loadSprite("spike", "spike.png");
 loadSprite("steel", "steel.png");

@@ -18,16 +18,21 @@
     "shx": "^0.3.4"
   },
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel src/index.html",
     "prebuild-dev": "shx rm -rf dist/*",
-    "build-dev": "parcel build index.html --no-minify --public-url ./",
+    "build-dev": "parcel build src/index.html --no-minify --public-url ./",
     "prebuild": "shx rm -rf dist/*",
-    "build": "parcel build index.html --no-minify --public-url ./",
+    "build": "parcel build src/index.html --no-minify --public-url ./",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4"
+    "eslint-plugin-import": "^2.23.4",
+    "parcel-plugin-static-files-copy": "^2.6.0"
+  },
+  "staticFiles": {
+    "staticPath": "src/img",
+    "watcherGlob": "**"
   }
 }
